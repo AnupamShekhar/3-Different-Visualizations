@@ -1,0 +1,28 @@
+#import the required libraries and load the dataset
+import pandas as pd
+%matplotlib inline
+import matplotlib.pyplot as plt
+
+df = pd.read_csv("C://Users//Anupam//Documents//store_sales.csv")
+df.head()
+
+
+#create a pie-chart
+df.mean().plot(kind='pie')
+plt.title("Mean of Store Sales")
+plt.xlabel("")
+plt.ylabel("");
+
+
+#create a bar chart
+df.iloc[0, 1:].plot(kind='bar')
+plt.title("Total of Store Sales")
+plt.xlabel("Store Name")
+plt.ylabel("Total Sales");
+
+
+#create a line chart
+df.iloc[0, 1:].plot()
+plt.title("Total of Store Sales")
+plt.xlabel("Store Name")
+plt.ylabel("Total Sales");
